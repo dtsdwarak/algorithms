@@ -2,29 +2,24 @@
 
 using namespace std;
 
-int returnSize(int b[]){
-    cout<<"\n"<<sizeof(b);
-    cout<<"\n"<<sizeof(b[0]);
-    return (sizeof(b)/sizeof(b[0]));
-}
-
-
 int main(){
-    int arr[]={1,6,2,5,89,3,0,2,54,26},small;
-    for(int i=0;i<10;i++){
-        small = i;
-        for(int j=i;j<10;j++){
-            if(arr[small]>arr[j])
-            small = j;
+    int arr[]={9,8,7,6,5,4,3,2,1}, min,temp;
+    int size=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<size;i++){
+        min=i;
+        for(int j=i+1;j<size;j++){
+            if(arr[j]<arr[min])
+                min=j;
         }
-        int temp = arr[small];
-        arr[small]= arr[i];
-        arr[i]=temp;
+        
+        //Swapping elements
+        temp=arr[i];
+        arr[i]=arr[min];
+        arr[min]=temp;
     }
     
-    cout<<"\n";
-    for(int i=0;i<10;i++)
-    cout<<" "<<arr[i];
+    //Printing for output
+    for(int i=0;i<size;i++)
+        cout<<arr[i]<<" ";
     return 0;
 }
-
