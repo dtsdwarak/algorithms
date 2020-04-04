@@ -11,7 +11,7 @@ struct Book {
 Book* front = NULL; 
 Book* rear = NULL;
 
-void push(int val) {
+void enqueue(int val) {
   
   Book* book = new Book;
   if (book == NULL) {
@@ -31,7 +31,7 @@ void push(int val) {
   
 }
 
-int pop () {
+int dequeue () {
   
   if (front == NULL) {
     cout<<"\b Queue empty";
@@ -39,14 +39,14 @@ int pop () {
   }
   
   int val = front->no;
-  Book* pop = front;
+  Book* dequeue = front;
   
   if (front == rear) 
     front = rear = NULL;
   else
     front = front->next;
     
-  delete pop;
+  delete dequeue;
   return val;
 }
 
@@ -54,16 +54,16 @@ int main() {
   
   int choice, val;
   while(1) {
-    cout<<"\n\n 1. Push \n 2. Pop \n 3. Quit \n Enter choice: ";
+    cout<<"\n\n 1. enqueue \n 2. dequeue \n 3. Quit \n Enter choice: ";
     cin>>choice;
     switch(choice) {
       case 1: cout<<"\n Enter number : ";
                cin>>val;
-              push(val);
-              cout<<"\n Value pushed = "<<val;
+              enqueue(val);
+              cout<<"\n Value enqueued = "<<val;
               break;
-      case 2: val = pop();
-              if (val != INT_MIN) cout<<"\n Value popped = "<<val;
+      case 2: val = dequeue();
+              if (val != INT_MIN) cout<<"\n Value dequeued = "<<val;
               break;
       case 3: exit(1);
     }
