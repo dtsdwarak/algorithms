@@ -1,12 +1,13 @@
 # include <iostream>
 # include <string>
 # include <cmath>
+# include <climits>
 
 typedef long long int big;
 
 using namespace std;
 
-int prime=10111;
+int prime=13;
 
 
 big computeRollingHash(string previousText, string currentText, big previousHash) {
@@ -28,42 +29,36 @@ big computeHash(string value) {
   return hash;
 }
 
-bool compareStrings(string a, string b) {
-  return (a == b) ? true: false;
-}
-
 void RabinKarpSearch(string text, string pattern) {
 
-  if (pattern.length() < text.length()) {
+  if (pattern.length() > text.length()) {
     cout<<"Pattern longer than text length";
     return;
   }
 
   int n = pattern.length();
   big patternHash = computeHash(pattern);
-  big textHash = computeHash(text.substr(0,n));
   
-  if (patternHash == textHash && pattern == text.substr(0,n)) {
-    cout<<"\n Pattern found at -> "<<0;
-  }
-  
-  for(int i = 1;i+n<text.length();i++) {
-    
-  }
- 
-  
-  
+  big previousHash = INT_MIN, currentHash = INT_MIN;
 
+  for(int i = 0;i+n<=text.length();i++) {
   
-  
+    string subtext = text.substr(i,n);
+    previousHash = currentHash;
+    currentHash = (previousHash==INT_MIN) ? computeHash(subtext) : computeRollingHash(text.substr(i-1,n),subtext,previousHash);
+    
+    if (patternHash == currentHash && pattern == subtext)
+      cout<<"\n Pattern found at -> "<<i;
+  }
+
 }
 
 
 int main() {
 
-  string text = "ABABDABACDABABCABAB";
+  string text = "ABABABABCABABDABACDABABCABAB";
   string pattern = "ABABCABAB";
 
-  RabinKarp(text, pattern);
+  RabinKarpSearch(text, pattern);
     
 }
