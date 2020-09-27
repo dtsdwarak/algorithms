@@ -52,6 +52,7 @@ $ sudo apt install geany
 $ pwd ~/.config/geany/templates/files/
 $ ln -s /home/ANT.AMAZON.COM/dwarakam/projects/algorithms/cpp/cpt.cpp ./cpt.cpp
 ```
+4. For Geany themes, check [Geany Themes](https://www.geany.org/download/themes/)
 
 ### Optional Steps
 
