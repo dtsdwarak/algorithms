@@ -46,13 +46,18 @@ $ sudo apt install geany
 2.4.2. Compile (F8): `g++ -std=c++11 -Wshadow -Wall -o "%e" "%f" -O2 -Wno-unused-result`   
 2.4.3. Build (F9): `g++ -std=c++11 -Wshadow -Wall -o "%e" "%f" -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG`   
 2.5. If your computer beeps after compilation, unmark Beep on errors in Preferences -> General -> Miscellaneous.   
-2.6. Open a file ~/.bashrc and uncomment a line #force_color_prompt=yes in order to get colorful terminal in Geany. Restart geany or run source ~/.bashrc to trigger the change.   
+2.6. Open a file `~/.bashrc` and uncomment a line `#force_color_prompt=yes` in order to get colorful terminal in Geany. Restart geany or run `$ source ~/.bashrc` to trigger the change.   
 3. Symlink template file from your repo to Geany templates directory within `~/.config/geany/templates/files/`   
 ```bash
 $ pwd ~/.config/geany/templates/files/
 $ ln -s /home/ANT.AMAZON.COM/dwarakam/projects/algorithms/cpp/cpt.cpp ./cpt.cpp
 ```
 4. For Geany themes, check [Geany Themes](https://www.geany.org/download/themes/)
+5. For optional plugins, install 
+```bash
+$ sudo apt install geany-plugins
+```
+You may want to checkout `git-change-bar` plugin.
 
 ### Optional Steps
 
