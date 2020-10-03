@@ -4,6 +4,8 @@
 
 # include <bits/stdc++.h>
 
+#define pval(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
+
 using namespace std;
 
 typedef long long ll;
