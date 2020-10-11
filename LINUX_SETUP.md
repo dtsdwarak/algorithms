@@ -43,8 +43,9 @@ $ sudo apt install geany
 2.3. In Terminal tab, mark `Follow path of the current file`. Terminal will now automatically change a path after you open a new file.   
 2.4. (optional) In Editor tab, change Comment toggle marker to an empty string or a single space.   
 2.4.1. Open any C++ file in Geany, go to Build -> Set Build Commands and copy my flags.    
-2.4.2. Compile (F8): `g++ -std=c++11 -Wshadow -Wall -o "%e" "%f" -O2 -Wno-unused-result`   
-2.4.3. Build (F9): `g++ -std=c++11 -Wshadow -Wall -o "%e" "%f" -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG`   
+2.4.2. Compile (F8): `g++ -std=c++11 -Wshadow -Wall -o "%e".out "%f" -O2 -Wno-unused-result`   
+2.4.3. Build (F9): `g++ -std=c++11 -Wshadow -Wall -o "%e".out "%f" -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG`   
+2.4.4. Execute (F5): `"./%e".out`   
 2.5. If your computer beeps after compilation, unmark Beep on errors in Preferences -> General -> Miscellaneous.   
 2.6. Open a file `~/.bashrc` and uncomment a line `#force_color_prompt=yes` in order to get colorful terminal in Geany. Restart geany or run `$ source ~/.bashrc` to trigger the change.   
 3. Symlink template file from your repo to Geany templates directory within `~/.config/geany/templates/files/`   
