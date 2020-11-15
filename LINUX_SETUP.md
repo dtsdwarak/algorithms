@@ -50,10 +50,10 @@ $ sudo apt install geany
 2.6. Open a file `~/.bashrc` and uncomment a line `#force_color_prompt=yes` in order to get colorful terminal in Geany. Restart geany or run `$ source ~/.bashrc` to trigger the change.   
 3. Symlink template file from your repo to Geany templates directory within `~/.config/geany/templates/files/`   
 ```bash
-$ pwd ~/.config/geany/templates/files/
+$ cd ~/.config/geany/templates/files/
 $ ln -s /home/ANT.AMAZON.COM/dwarakam/projects/algorithms/cpp/cpt.cpp ./cpt.cpp
 ```
-4. For Geany themes, check [Geany Themes](https://www.geany.org/download/themes/)
+4. For Geany themes, check [Geany Themes](https://www.geany.org/download/themes/). Post installation of theme, select View->Change Color Scheme and choose your installed theme.
 5. For optional plugins, install 
 ```bash
 $ sudo apt install geany-plugins
