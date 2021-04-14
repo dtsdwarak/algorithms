@@ -10,4 +10,4 @@ For linux users, please follow the [Linux Setup Guide](LINUX_SETUP.md) guide.
 
 # References
 
-1. [xiaoguan's Leetcode Diary](https://xiaoguan.gitbooks.io/leetcode/content/LeetCode/leetcode-diary.html)
+For Interview prep references, also check [DS Wise Algorithms List](./interview_prep/Algorithms.md)
