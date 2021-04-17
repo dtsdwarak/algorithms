@@ -101,6 +101,7 @@ This page mentions specific algorithms for each section of DS problems. (This is
 
 1. [Preparing with Leetcode](https://www.reddit.com/r/cscareerquestions/comments/6luszf/a_leetcode_grinding_guide/)
 2. [xiaoguan's Leetcode Diary](https://xiaoguan.gitbooks.io/leetcode/content/LeetCode/leetcode-diary.html)
+3. [twchen's Leetcode Problem Solutions](https://twchen.gitbook.io/leetcode/array)
 
 ## Google Interview Questions
 
