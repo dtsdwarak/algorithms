@@ -42,7 +42,7 @@ void KMPSearch(string& text, string& pattern) {
       j++;
     } else {
       if (j != 0)
-        j = lps[j];
+        j = lps[j-1];
       else
         i++;
     }
