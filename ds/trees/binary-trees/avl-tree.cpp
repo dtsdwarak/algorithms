@@ -117,6 +117,85 @@ Node* insert(Node *root, int value) {
     return root;
 }
 
+Node* findSuccessor(Node *root) {
+    
+    while(root->left)
+      root = root->left;
+    
+    return root;
+}
+
+Node* deleteNode(Node *root, int value) {
+  
+  if (!root) {
+      cout<<value<<" not found.";
+      return root;
+  }
+  
+  if (value < root->val)
+    root->left = deleteNode(root->left, value);
+  else if (value > root->val)
+    root->right = deleteNode(root->right, value);
+  else {
+      
+      // If node to be deleted has atmost 1 child
+      if (!root->left || !root->right) {
+      
+         Node* temp = (!root->left) ? root->right : root->left;
+         
+         // If there are no children
+         if (!temp) {
+            temp = root;
+            root = NULL;
+         }
+         else 
+            root = temp;
+        
+        delete(temp);
+      }
+      else { // Node has two children
+          
+          Node *temp = findSuccessor(root->right);
+          
+          root->val = temp->val;
+          root->right = deleteNode(root->right, temp->val);
+      }
+    
+  }
+  
+  if (!root)
+      return NULL;
+      
+  // Adjust height
+  root->height = max(getHeight(root->right), getHeight(root->left)) + 1;
+  
+  int heightBalance = getHeightBalance(root);
+  
+  // left left
+  if (heightBalance > 1 && getHeightBalance(root->left) >= 0) {
+      return rightRotate(root);
+  }
+  
+  // left right
+  if (heightBalance > 1 && getHeightBalance(root->left) < 0) {
+      root->left = rightRotate(root->left);
+      return leftRotate(root);
+  }
+  
+  // right right
+  if (heightBalance < -1 && getHeightBalance(root->left) <= 0) {
+      return leftRotate(root);
+  }
+  
+  // right left
+  if (heightBalance < -1 && getHeightBalance(root->left) > 0) {
+    root->right = leftRotate(root->right);
+    return rightRotate(root);
+  }
+  
+  return root;
+}
+
 void preOrder(Node *root) {
 
     if (!root)
@@ -139,6 +218,11 @@ int main() {
     root = insert(root, 3);
     root = insert(root, 4);
     root = insert(root, 5);
+    
+    preOrder(root);
+    
+    root = deleteNode(root, 5);
+    root = deleteNode(root, 4);
     
     preOrder(root);
     
