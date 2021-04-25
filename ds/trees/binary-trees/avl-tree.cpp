@@ -1,5 +1,8 @@
 /*
 	author: dtsdwarak
+  references: 
+  *   1. https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
+  *   2. https://www.geeksforgeeks.org/avl-tree-set-2-deletion/
 */
 
 # include <bits/stdc++.h>
