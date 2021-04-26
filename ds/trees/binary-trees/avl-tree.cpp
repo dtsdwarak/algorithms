@@ -96,25 +96,23 @@ Node* insert(Node *root, int value) {
     int heightBalance = getHeightBalance(root);
     
     // left left
-    if (heightBalance > 1 && value < root->left->val) {
+    if (heightBalance > 1 && value < root->left->val)
         return rightRotate(root);
-    }
     
     // left right
     if (heightBalance > 1 && value > root->left->val) {
-        root->left = rightRotate(root->left);
-        return leftRotate(root);
+        root->left = leftRotate(root->left);
+        return rightRotate(root);
     }
     
     // right right
-    if (heightBalance < -1 && value > root->right->val) {
+    if (heightBalance < -1 && value > root->right->val)
         return leftRotate(root);
-    }
     
     // right left
     if (heightBalance < -1 && value < root->right->val) {
-      root->right = leftRotate(root->right);
-      return rightRotate(root);
+      root->right = rightRotate(root->right);
+      return leftRotate(root);
     }
     
     return root;
@@ -175,25 +173,23 @@ Node* deleteNode(Node *root, int value) {
   int heightBalance = getHeightBalance(root);
   
   // left left
-  if (heightBalance > 1 && getHeightBalance(root->left) >= 0) {
+  if (heightBalance > 1 && getHeightBalance(root->left) >= 0)
       return rightRotate(root);
-  }
   
   // left right
   if (heightBalance > 1 && getHeightBalance(root->left) < 0) {
-      root->left = rightRotate(root->left);
-      return leftRotate(root);
+      root->left = leftRotate(root->left);
+      return rightRotate(root);
   }
   
   // right right
-  if (heightBalance < -1 && getHeightBalance(root->left) <= 0) {
+  if (heightBalance < -1 && getHeightBalance(root->right) <= 0)
       return leftRotate(root);
-  }
   
   // right left
-  if (heightBalance < -1 && getHeightBalance(root->left) > 0) {
-    root->right = leftRotate(root->right);
-    return rightRotate(root);
+  if (heightBalance < -1 && getHeightBalance(root->right) > 0) {
+    root->right = rightRotate(root->right);
+    return leftRotate(root);
   }
   
   return root;
