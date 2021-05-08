@@ -15,6 +15,12 @@ This page mentions specific algorithms for each section of DS problems. (This is
 
 ## Stacks/Queues
 
+1. Next Greater Element - I, II
+2. Parentheses
+3. Minimum Cost Tree From Leaf Values
+4. Score of Parentheses
+5. Validate Stack Sequences
+
 > References
 > 1. [GeeksForGeeks - Stack](https://www.youtube.com/playlist?list=PLqM7alHXFySF7Lap-wi5qlaD8OEBx9RMV)
 > 2. [GeeksforGeeks - Queue](https://www.youtube.com/playlist?list=PLqM7alHXFySG6wgjVeEat_ouTIi0IBQ6D)
