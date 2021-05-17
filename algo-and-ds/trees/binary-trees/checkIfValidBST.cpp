@@ -1,5 +1,9 @@
 /*
 	author: dtsdwarak
+    
+    NOTE - 
+    Other idea is to perform inOrderTraversal of the tree 
+    and check if the return array is sorted.
 */
 
 # include <bits/stdc++.h>
