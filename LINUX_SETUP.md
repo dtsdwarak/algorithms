@@ -51,7 +51,7 @@ $ sudo apt install geany
 3. Symlink template file from your repo to Geany templates directory within `~/.config/geany/templates/files/`   
 ```bash
 $ cd ~/.config/geany/templates/files/
-$ ln -s /home/ANT.AMAZON.COM/dwarakam/projects/algorithms/cpp/cpt.cpp ./cpt.cpp
+$ ln -s /home/dwarakam/projects/algorithms/cpp/cpt.cpp ./cpt.cpp
 ```
 4. For Geany themes, check [Geany Themes](https://www.geany.org/download/themes/). Post installation of theme, select View->Change Color Scheme and choose your installed theme.
 5. For optional plugins, install 
