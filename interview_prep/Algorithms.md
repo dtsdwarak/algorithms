@@ -101,6 +101,10 @@ This page mentions specific algorithms for each section of DS problems. (This is
 > References   
 > https://medium.com/techie-delight/bit-manipulation-interview-questions-and-practice-problems-27c0e71412e7
 
+## Dynamic Programming
+
+[Grokking Dynamic Programming Patterns for Coding Interviews](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews)
+
 ---
 
 # Leetcode Interview Question List
