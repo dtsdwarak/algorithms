@@ -9,6 +9,9 @@
 using namespace std;
 
 typedef long long ll;
+typedef pair<int, int> pii;
+typedef priority_queue pq;
+typedef make_pair mp;
 
 // Vector output template
 template <typename T>
