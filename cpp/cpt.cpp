@@ -4,12 +4,11 @@
 
 # include <bits/stdc++.h>
 
-#define pval(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
-
 using namespace std;
 
 /** === Preprocessor Tokens === **/
 
+#define pval(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
 #define priority_queue pq;
 #define make_pair mp;
 #define push_back pb;
