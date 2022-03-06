@@ -8,18 +8,19 @@
 
 using namespace std;
 
-// Preprocessor Tokens
+/** === Preprocessor Tokens === **/
 
 #define priority_queue pq;
 #define make_pair mp;
+#define push_back pb;
 
-// Compiler Tokens
+/** === Compiler Tokens === **/
 
 typedef long long ll;
 typedef pair<int, int> pii;
 
+/** === Vector output template === **/
 
-// Vector output template
 template <typename T>
 std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {
   if ( !v.empty() ) {
@@ -30,13 +31,4 @@ std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {
   return out;
 }
 
-int main() {
-
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    
-    vector<int> v = vector<int>{10, 20, 30};
-    //cout<<v;
-    
-}
-
+/** === Program Logic === **/
