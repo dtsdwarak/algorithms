@@ -8,10 +8,16 @@
 
 using namespace std;
 
+// Preprocessor Tokens
+
+#define priority_queue pq;
+#define make_pair mp;
+
+// Compiler Tokens
+
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef priority_queue pq;
-typedef make_pair mp;
+
 
 // Vector output template
 template <typename T>
@@ -29,5 +35,8 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
+    vector<int> v = vector<int>{10, 20, 30};
+    //cout<<v;
     
 }
+
