@@ -32,3 +32,16 @@ std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {
 }
 
 /** === Program Logic === **/
+
+int main() {
+ 
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    
+    
+    
+           
+    return 0;
+    
+}
