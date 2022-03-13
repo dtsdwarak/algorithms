@@ -9,9 +9,9 @@ using namespace std;
 /** === Preprocessor Tokens === **/
 
 #define pval(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
-#define priority_queue pq;
-#define make_pair mp;
-#define push_back pb;
+#define pq priority_queue;
+#define mp make_pair;
+#define pb push_back;
 
 /** === Compiler Tokens === **/
 
