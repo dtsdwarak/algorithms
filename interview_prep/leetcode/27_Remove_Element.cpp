@@ -1,29 +1,18 @@
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-        
-        
-        set<int> occurenceIndex;
-        int n = nums.size();
-        
-        for(int i=0; i<n; i++) {
-            if (nums[i] == val)
-                occurenceIndex.insert(i);
-        }
-        
-        int index=0,i=0;
-        
-        for(;i<n;i++) {
-            if (occurenceIndex.find(i) != occurenceIndex.end()) {
-                continue;
+
+        if (val <0 || val > 100)
+            return 0;
+
+       int j=0;
+       for(int i=0;i<nums.size();i++) {
+            if (nums[i] != val) {
+                nums[j++] = nums[i]; 
             }
-            nums[index]=nums[i];
-            index++;
-        }
-        
-        for(;i<n;i++)
-            nums[i] = val;
-        
-        return nums.size()-occurenceIndex.size();
+       }
+
+       return j;
+
     }
 };
