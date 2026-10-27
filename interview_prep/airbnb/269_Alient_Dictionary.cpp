@@ -1,1 +1,0 @@
-../leetcode/269_Alient_Dictionary.cpp
